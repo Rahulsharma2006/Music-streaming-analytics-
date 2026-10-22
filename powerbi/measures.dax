@@ -1,0 +1,166 @@
+-- Music Streaming Analytics — DAX measures
+-- Import table: powerbi_artists.csv (recommended name in the model: Artists)
+-- Grain: one row per artist_name
+-- Stream columns are already in millions. Do not divide by 1,000,000 again.
+-- Never SUM percentage/share columns to describe catalog mix; use DIVIDE of summed streams.
+
+-- =============================================================================
+-- Catalog totals
+-- =============================================================================
+
+Total Streams (M) =
+SUM ( Artists[total_streams_millions] )
+
+Solo Streams (M) =
+SUM ( Artists[solo_streams_millions] )
+
+Collaborative Streams (M) =
+SUM ( Artists[collaborative_streams_millions] )
+
+Lead Streams (M) =
+SUM ( Artists[lead_streams_millions] )
+
+Feature Streams (M) =
+SUM ( Artists[feature_streams_millions] )
+
+-- =============================================================================
+-- Distinct counts
+-- =============================================================================
+
+Distinct Artists =
+DISTINCTCOUNT ( Artists[artist_name] )
+
+Distinct Genres =
+DISTINCTCOUNT ( Artists[primary_genre] )
+
+Distinct Countries =
+DISTINCTCOUNT ( Artists[country_of_origin] )
+
+Distinct Languages =
+DISTINCTCOUNT ( Artists[primary_language] )
+
+-- =============================================================================
+-- Averages and typical values
+-- =============================================================================
+
+Average Streams per Artist (M) =
+AVERAGEX (
+    VALUES ( Artists[artist_name] ),
+    CALCULATE ( SUM ( Artists[total_streams_millions] ) )
+)
+
+Median Streams per Artist (M) =
+MEDIAN ( Artists[total_streams_millions] )
+
+-- =============================================================================
+-- Shares from streams (filter-context safe)
+-- =============================================================================
+
+Solo Share =
+DIVIDE ( [Solo Streams (M)], [Total Streams (M)] )
+
+Collaboration Share =
+DIVIDE ( [Collaborative Streams (M)], [Total Streams (M)] )
+
+Lead Share =
+DIVIDE ( [Lead Streams (M)], [Total Streams (M)] )
+
+Feature Share =
+DIVIDE ( [Feature Streams (M)], [Total Streams (M)] )
+
+-- =============================================================================
+-- Contribution and ranking
+-- =============================================================================
+
+Percentage Contribution to Total Streams =
+DIVIDE (
+    [Total Streams (M)],
+    CALCULATE ( [Total Streams (M)], ALL ( Artists ) )
+)
+
+Percentage Contribution to Visible Total =
+DIVIDE (
+    [Total Streams (M)],
+    CALCULATE ( [Total Streams (M)], ALLSELECTED ( Artists ) )
+)
+
+Artist Rank by Total Streams =
+IF (
+    HASONEVALUE ( Artists[artist_name] ),
+    RANKX (
+        ALLSELECTED ( Artists[artist_name] ),
+        [Total Streams (M)],
+        ,
+        DESC,
+        DENSE
+    )
+)
+
+-- =============================================================================
+-- Leaders (for cards / titles)
+-- =============================================================================
+
+Leading Artist =
+VAR TopTable =
+    TOPN (
+        1,
+        ADDCOLUMNS (
+            VALUES ( Artists[artist_name] ),
+            "@streams", [Total Streams (M)]
+        ),
+        [@streams], DESC
+    )
+RETURN
+    CONCATENATEX ( TopTable, Artists[artist_name], ", " )
+
+Leading Genre =
+VAR TopTable =
+    TOPN (
+        1,
+        ADDCOLUMNS (
+            VALUES ( Artists[primary_genre] ),
+            "@streams", [Total Streams (M)]
+        ),
+        [@streams], DESC
+    )
+RETURN
+    CONCATENATEX ( TopTable, Artists[primary_genre], ", " )
+
+Leading Country =
+VAR TopTable =
+    TOPN (
+        1,
+        ADDCOLUMNS (
+            VALUES ( Artists[country_of_origin] ),
+            "@streams", [Total Streams (M)]
+        ),
+        [@streams], DESC
+    )
+RETURN
+    CONCATENATEX ( TopTable, Artists[country_of_origin], ", " )
+
+-- =============================================================================
+-- Data quality
+-- =============================================================================
+
+Mismatch Artists (Lead+Feature) =
+CALCULATE (
+    DISTINCTCOUNT ( Artists[artist_name] ),
+    Artists[flag_lead_feature_mismatch] = TRUE ()
+)
+
+IQR Outlier Artists =
+CALCULATE (
+    DISTINCTCOUNT ( Artists[artist_name] ),
+    Artists[flag_iqr_high_total] = TRUE ()
+)
+
+Average Lead-Feature Residual (M) =
+AVERAGE ( Artists[lead_feature_residual_millions] )
+
+-- =============================================================================
+-- Formatting notes (set in Power BI Desktop, not in this file)
+-- Total / Solo / Collaborative / Lead / Feature: #,0.0
+-- Shares and percentage contribution: 0.00%
+-- Distinct counts and ranks: 0
+-- =============================================================================

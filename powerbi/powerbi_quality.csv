@@ -1,0 +1,7 @@
+issue,n
+Missing cells,0
+Duplicate artist names,0
+Lead + feature residual > 0.5 million,400
+IQR high total-stream outliers,49
+Percentage values outside 0-100,0
+Solo + collaborative residual > 0.01 million,0

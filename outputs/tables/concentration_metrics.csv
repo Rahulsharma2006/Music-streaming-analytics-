@@ -1,0 +1,6 @@
+metric,value
+top_10_share,0.1062050897100707
+top_50_share,0.30591930356430785
+top_100_share,0.45910964210598726
+gini_total_streams,0.3563721504497708
+n_iqr_high_outliers,49

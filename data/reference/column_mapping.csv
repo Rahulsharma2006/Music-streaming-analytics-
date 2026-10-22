@@ -1,0 +1,15 @@
+original_name,cleaned_name
+Artist Name,artist_name
+Sex,sex
+Country of Origin,country_of_origin
+Primary Language,primary_language
+Primary Genre,primary_genre
+Artist Type,artist_type
+Debut Year,debut_year
+Total Streams (in millions),total_streams_millions
+Lead Streams (in millions),lead_streams_millions
+Feature Streams (in millions),feature_streams_millions
+Solo Streams (in millions),solo_streams_millions
+% of Solo Streams,pct_of_solo_streams
+Collaborative Streams (in millions),collaborative_streams_millions
+% of Collaborative Streams,pct_of_collaborative_streams

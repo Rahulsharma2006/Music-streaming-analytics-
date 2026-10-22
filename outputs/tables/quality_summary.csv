@@ -1,0 +1,9 @@
+metric,value
+rows,500
+unique_artists,500
+missing_cells,0
+duplicate_artists,0
+lead_feature_mismatch_flags,400
+iqr_high_total_outliers,49
+solo_collab_mismatch_flags,0
+pct_out_of_range_flags,0

@@ -1,0 +1,10 @@
+test,n,statistic,p_value,effect_or_note
+shapiro_total_streams,500,0.5971702665577219,1.9388719762564013e-32,Rejects normality of raw totals if p is small; expected for right-skewed streaming data.
+shapiro_log10_total_streams,500,0.892697789480302,3.330492631046676e-18,Log10 transform still may not be Gaussian; used only as a diagnostic.
+wilcoxon_solo_vs_group_total_streams,500,28139.5,0.0015414052207625714,Cliff's delta (Solo minus Group) = 0.188. Positive means Solo tends to rank higher.
+wilcoxon_female_vs_male_solo_artists_total_streams,373,12181,0.7723398246952518,"Cliff's delta (Female minus Male, solo artists) = 0.021."
+spearman_collaborative_share_vs_total,500,0.06244212646102603,0.16328304722388212,"Spearman rho; association, not a causal effect of collaboration."
+spearman_debut_year_vs_total,500,0.012477151971830101,0.7807742959252684,Spearman rho; debut year is not a performance time series.
+spearman_solo_share_vs_total,500,-0.06244212646102603,0.16328304722388212,Spearman rho; complement of collaborative share.
+pearson_collaborative_share_vs_log10_total,500,0.06505780629097871,0.14632512963087987,Pearson r on log10 totals versus collaborative share.
+kruskal_genre_n_ge_10_total_streams,454,18.00462877164034,0.05488561088041376,Restricted to genres with at least 10 artists (11 genres).

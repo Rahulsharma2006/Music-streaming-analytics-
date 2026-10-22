@@ -1,0 +1,4 @@
+step,detail,n_rows
+read_raw,Read the original CSV with trimmed header names. Raw file was not overwritten.,500
+normalize_names_and_types,"Mapped original headers to snake_case, squished character fields, stored debut_year as integer.",500
+quality_flags,Flagged 400 artists whose lead+feature residual exceeds 0.5 million streams. No rows deleted.,500

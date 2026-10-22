@@ -1,0 +1,10 @@
+kpi,value
+total_streams_millions,8408805.1
+distinct_artists,500
+distinct_genres,23
+distinct_countries,43
+distinct_languages,11
+leading_artist,Drake
+leading_genre,Hip-Hop
+median_streams_millions,11923.25
+collaborative_share_catalog,0.505018994910466

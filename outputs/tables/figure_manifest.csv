@@ -1,0 +1,11 @@
+chart,question
+01_top15_artists_total_streams,Which artists have the highest total streams?
+02_genre_total_streams,Which genres contribute the most catalog streams?
+03_country_total_streams,Which origin countries contribute the most catalog streams?
+04_solo_vs_collaborative_totals,How do solo and collaborative streams compare in aggregate?
+05_artist_type_boxplot,Do solo artists and groups differ in typical totals?
+06_collaboration_share_vs_total,How does collaboration share relate to total streams?
+07_debut_era_median_streams,How do median totals vary by debut era?
+08_language_total_streams,Which primary languages contribute the most catalog streams?
+09_total_streams_distribution,"How are total streams distributed, and where are outliers?"
+10_data_quality_flags,What data-quality issues appear in this file?

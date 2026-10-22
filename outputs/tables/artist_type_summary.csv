@@ -1,0 +1,3 @@
+artist_type,n_artists,mean_streams_millions,median_streams_millions,total_streams_millions,mean_solo_share,mean_collaborative_share
+Group,127,13290.133070866143,10607,1687846.9,0.7691999635790217,0.23080003642097838
+Solo,373,18018.654691689007,12700.7,6720958.2,0.4165603886086078,0.5834396113913922

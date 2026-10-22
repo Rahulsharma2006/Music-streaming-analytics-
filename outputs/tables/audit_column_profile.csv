@@ -1,0 +1,15 @@
+original_name,r_class,n_missing,n_blank,n_distinct,cleaned_name
+Artist Name,character,0,0,500,artist_name
+Sex,character,0,0,3,sex
+Country of Origin,character,0,0,43,country_of_origin
+Primary Language,character,0,0,11,primary_language
+Primary Genre,character,0,0,23,primary_genre
+Artist Type,character,0,0,2,artist_type
+Debut Year,numeric,0,,61,debut_year
+Total Streams (in millions),numeric,0,,499,total_streams_millions
+Lead Streams (in millions),numeric,0,,498,lead_streams_millions
+Feature Streams (in millions),numeric,0,,464,feature_streams_millions
+Solo Streams (in millions),numeric,0,,494,solo_streams_millions
+% of Solo Streams,numeric,0,,485,pct_of_solo_streams
+Collaborative Streams (in millions),numeric,0,,488,collaborative_streams_millions
+% of Collaborative Streams,numeric,0,,485,pct_of_collaborative_streams

@@ -1,0 +1,5 @@
+check,max_abs_diff,n_abs_gt_0_01,n_abs_gt_1
+solo_plus_collaborative_minus_total,7.275957614183426e-12,0,0
+lead_plus_feature_minus_total,89.19999999999891,425,397
+pct_solo_plus_pct_collab_minus_100,5.000003966415534e-9,0,0
+implied_solo_pct_minus_reported_pct,4.980904577678302e-9,0,0

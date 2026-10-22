@@ -1,0 +1,20 @@
+[2026-10-22 16:32:21 UTC] Pipeline start in /home/rahulsharma/Desktop/Music-Streaming-Analytics 
+[2026-10-22 16:32:21 UTC] Running R/01_data_audit.R 
+[2026-10-22 16:32:21 UTC] Starting data audit 
+[2026-10-22 16:32:23 UTC] Data audit complete 
+[2026-10-22 16:32:23 UTC] Running R/02_data_cleaning.R 
+[2026-10-22 16:32:23 UTC] Starting data cleaning 
+[2026-10-22 16:32:23 UTC] Data cleaning complete; rows = 500 
+[2026-10-22 16:32:23 UTC] Running R/03_feature_engineering.R 
+[2026-10-22 16:32:23 UTC] Starting feature engineering 
+[2026-10-22 16:32:23 UTC] Feature engineering complete 
+[2026-10-22 16:32:23 UTC] Running R/04_exploratory_analysis.R 
+[2026-10-22 16:32:23 UTC] Starting exploratory analysis 
+[2026-10-22 16:32:23 UTC] Exploratory analysis complete 
+[2026-10-22 16:32:23 UTC] Running R/05_statistical_analysis.R 
+[2026-10-22 16:32:23 UTC] Starting statistical analysis 
+[2026-10-22 16:32:25 UTC] Statistical analysis complete 
+[2026-10-22 16:32:25 UTC] Running R/06_visualizations.R 
+[2026-10-22 16:32:25 UTC] Starting visualizations 
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'

@@ -1,0 +1,83 @@
+variable,value,n
+Sex,Female,88
+Sex,Male,390
+Sex,Mixed,22
+Artist Type,Group,127
+Artist Type,Solo,373
+Primary Genre,Hip-Hop,115
+Primary Genre,Pop,102
+Primary Genre,Rock,60
+Primary Genre,Reggaeton,43
+Primary Genre,R&B,31
+Primary Genre,Latin,30
+Primary Genre,EDM,22
+Primary Genre,Regional Mexican,19
+Primary Genre,Filmi,11
+Primary Genre,K-Pop,11
+Primary Genre,Country,10
+Primary Genre,Alternative,9
+Primary Genre,Sertanjeo,9
+Primary Genre,Metal,8
+Primary Genre,Folk,4
+Primary Genre,Bachata,3
+Primary Genre,Soul,3
+Primary Genre,Soundtrack,3
+Primary Genre,Afrobeats,2
+Primary Genre,Reggae,2
+Primary Genre,Children's Music,1
+Primary Genre,Nu Metal,1
+Primary Genre,Spoken Word,1
+Country of Origin,United States,265
+Country of Origin,United Kingdom,55
+Country of Origin,Mexico,27
+Country of Origin,Canada,18
+Country of Origin,Colombia,16
+Country of Origin,Brazil,15
+Country of Origin,India,13
+Country of Origin,South Korea,11
+Country of Origin,Argentina,9
+Country of Origin,Australia,7
+Country of Origin,Germany,7
+Country of Origin,Spain,6
+Country of Origin,France,5
+Country of Origin,Sweden,5
+Country of Origin,Ireland,4
+Country of Origin,Italy,3
+Country of Origin,Dominican Republic,2
+Country of Origin,Jamaica,2
+Country of Origin,Japan,2
+Country of Origin,Netherlands,2
+Country of Origin,Nigeria,2
+Country of Origin,Norway,2
+Country of Origin,Scotland,2
+Country of Origin,Austria,1
+Country of Origin,Barbados,1
+Country of Origin,Belgium,1
+Country of Origin,Chile,1
+Country of Origin,Cuba,1
+Country of Origin,Denmark,1
+Country of Origin,DR Congo,1
+Country of Origin,Guatemala,1
+Country of Origin,Iceland,1
+Country of Origin,Morocco,1
+Country of Origin,Nepal,1
+Country of Origin,New Zealand,1
+Country of Origin,Pakistan,1
+Country of Origin,Panama,1
+Country of Origin,Philippines,1
+Country of Origin,Russia,1
+Country of Origin,Senegal,1
+Country of Origin,South Africa,1
+Country of Origin,Trinidad and Tobago,1
+Country of Origin,Venezuela,1
+Primary Language,English,340
+Primary Language,Spanish,105
+Primary Language,Portuguese,15
+Primary Language,Hindi,11
+Primary Language,Korean,11
+Primary Language,German,7
+Primary Language,French,4
+Primary Language,Italian,3
+Primary Language,Tamil,2
+Primary Language,Punjabi,1
+Primary Language,Urdu,1

@@ -1,3 +1,4 @@
+
 # Music Streaming Analytics — R & Power BI
 
 An end-to-end music streaming analytics project built with **R, tidyverse, ggplot2, statistical analysis, and Power BI-ready datasets**. The project audits and cleans artist-level streaming data, engineers useful metrics, explores performance across artists and categories, generates reusable charts, and prepares data for an interactive Power BI report.
@@ -423,3 +424,59 @@ Run the actual project test command documented by the repository. If there is no
 ## License and dataset attribution
 
 Add a license only after deciding what license applies to your own code and checking the dataset's redistribution terms. Credit the original dataset provider using verified source details. Do not assume that the code license also grants permission to redistribute the raw data.
+## 🚀 Running the Interactive Dashboard
+
+The Music Streaming Analytics Dashboard is built using **Streamlit, Python, Pandas, and Plotly**. It provides interactive visualizations, KPI metrics, and filters to analyze music streaming performance.
+
+### Prerequisites
+- Python 3 installed
+- Project dependencies installed
+
+### Step 1: Navigate to the Project Directory
+
+```bash
+cd ~/Desktop/Music-Streaming-Analytics
+```
+
+### Step 2: Activate the Virtual Environment
+
+```bash
+source .venv/bin/activate
+```
+
+### Step 3: Install Dependencies
+
+Run this command the first time, or whenever dependencies need to be installed:
+
+```bash
+python -m pip install -r requirements-dashboard.txt
+```
+
+### Step 4: Launch the Dashboard
+
+```bash
+python -m streamlit run app.py
+```
+
+### Step 5: Open the Dashboard
+
+Open your browser and visit:
+
+**http://localhost:8501**
+
+The dashboard includes:
+- **Key Performance Indicators (KPIs):** Total streams, number of artists, average streams, and median streams.
+- **Top Artists Analysis:** Identify the top-performing artists by total streams.
+- **Genre Analysis:** Compare streaming performance across music genres.
+- **Country Analysis:** Explore streaming distribution by country.
+- **Collaboration Analysis:** Compare solo and collaborative streaming performance.
+- **Interactive Filters:** Filter data by genre, country, artist type, language, and debut year.
+- **Data Export:** Download the filtered dataset as a CSV file.
+
+### Stopping the Dashboard
+
+Press `Ctrl + C` in the terminal to stop the dashboard.
+
+### Note
+
+This is an interactive web dashboard built with Streamlit and Plotly. It is not a native Microsoft Power BI `.pbix` file.
